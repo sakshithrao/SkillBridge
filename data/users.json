@@ -1,30 +1,16 @@
 [
     {
         "id": 1,
-        "name": "Rahul",
-        "email": "rahul@gmail.com",
-        "password": "123456",
-        "role": "student"
-    },
-    {
-        "id": 2,
         "name": "sakshith",
-        "email": "sakshithrao85@gmail.com",
+        "email": "sakshithrao5@gmail.com",
         "password": "111111",
         "role": "student"
     },
     {
-        "id": 3,
-        "name": "hello",
-        "email": "hello@gmail.com",
-        "password": "123456",
-        "role": "trainer"
-    },
-    {
-        "id": 4,
-        "name": "hi",
-        "email": "hi@gmail.com",
-        "password": "1234567",
-        "role": "student"
+        "id": 2,
+        "name": "Admin",
+        "email": "admin@skillbridge.com",
+        "password": "admin123",
+        "role": "admin"
     }
 ]

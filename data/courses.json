@@ -1,1 +1,7 @@
-[]
+[
+    {
+        "id": 1,
+        "name": "Python",
+        "duration": "4 months"
+    }
+]

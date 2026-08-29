@@ -8,7 +8,7 @@ def register_user():
     name = input("Enter your name: ")
     email = input("Enter your email: ")
     password = input("Enter your password: ")
-    role = input("Enter your role (student/trainer): ")
+    role = input("Enter your role (student/trainer): ").strip().lower()
 
     if name == "":
         print("Name cannot be empty.")
@@ -20,6 +20,10 @@ def register_user():
 
     if not is_valid_password(password):
         print("Password must contain at least 6 characters.")
+        return
+
+    if role not in ["student", "trainer"]:
+        print("Invalid role.")
         return
 
     for user in users:

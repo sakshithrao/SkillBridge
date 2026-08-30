@@ -13,10 +13,13 @@ def manage_courses():
 
         choice = input("Enter your choice: ")
 
+        # View Courses
         if choice == "1":
             if len(courses) == 0:
                 print("No courses found.")
             else:
+                print("\n===== AVAILABLE COURSES =====")
+
                 for course in courses:
                     print(
                         "ID:", course["id"],
@@ -24,11 +27,16 @@ def manage_courses():
                         "| Duration:", course["duration"]
                     )
 
+        # Add Course
         elif choice == "2":
             name = input("Enter course name: ")
             duration = input("Enter course duration: ")
 
-            course_id = len(courses) + 1
+            # Generate a unique course ID
+            if len(courses) == 0:
+                course_id = 1
+            else:
+                course_id = max(course["id"] for course in courses) + 1
 
             new_course = {
                 "id": course_id,
@@ -42,8 +50,17 @@ def manage_courses():
 
             print("Course added successfully.")
 
+        # Delete Course
         elif choice == "3":
-            course_id = int(input("Enter course ID to delete: "))
+            if len(courses) == 0:
+                print("No courses found.")
+                continue
+
+            try:
+                course_id = int(input("Enter course ID to delete: "))
+            except ValueError:
+                print("Please enter a valid course ID.")
+                continue
 
             found = False
 
@@ -59,8 +76,10 @@ def manage_courses():
             else:
                 print("Course not found.")
 
+        # Back
         elif choice == "4":
             break
 
+        # Invalid choice
         else:
-            print("Invalid choice.")
+            print("Invalid choice. Please try again.")

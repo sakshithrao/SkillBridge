@@ -1,8 +1,8 @@
 # SkillBridge
+
 ## Smart Learning & Placement Management Portal
 
-SkillBridge is a Python-based learning and placement management portal designed
-to manage students, trainers, courses, and placement opportunities in one system.
+SkillBridge is a Python-based learning and placement management portal designed to manage students, trainers, courses, and placement opportunities in one system.
 
 ## Features
 
@@ -20,23 +20,29 @@ to manage students, trainers, courses, and placement opportunities in one system
 - Admin login
 - Manage users
 - Manage courses
-- Manage trainers
-
-### Analytics Module
-- Generate basic project and management reports
-- Analyze available data
+- Manage placement information
 
 ### Authentication
-- User registration
 - User login
 - Role-based access
-- Logout functionality
+- Registration and logout
+
+### Analytics
+- View project and management-related analytics
+- Generate reports
+
+## Tech Stack
+
+- Python
+- JSON
+- Git
+- GitHub
+- Jupyter Notebook
 
 ## Project Structure
 
 ```text
 SkillBridge/
-│
 ├── admin/
 ├── analytics/
 ├── authentication/
@@ -44,8 +50,6 @@ SkillBridge/
 ├── student/
 ├── trainer/
 ├── utils/
-│
 ├── main.py
 ├── requirements.txt
-├── README.md
-└── .gitignore
+└── README.md

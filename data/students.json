@@ -4,5 +4,11 @@
         "name": "ramu",
         "email": "ramu@studentgmail.com",
         "course": "python"
+    },
+    {
+        "id": 2,
+        "name": "sweety ",
+        "email": "sweety@gmail.com",
+        "course": "Python"
     }
 ]

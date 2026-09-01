@@ -1,1 +1,17 @@
-[]
+[
+    {
+        "company": "TCS",
+        "role": "Python Developer",
+        "package": "4 LPA"
+    },
+    {
+        "company": "Infosys",
+        "role": "Software Developer",
+        "package": "5 LPA"
+    },
+    {
+        "company": "Wipro",
+        "role": "Software Engineer",
+        "package": "4.5 LPA"
+    }
+]

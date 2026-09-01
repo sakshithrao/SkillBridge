@@ -1,21 +1,14 @@
+from utils.file_handler import read_data
+
+
 def generate_report():
-    print("\n===== TRAINER REPORT =====")
-    print("1. Student Report")
-    print("2. Course Report")
-    print("3. Back")
+    students = read_data("data/students.json")
+    courses = read_data("data/courses.json")
 
-    choice = input("Enter your choice: ")
+    print("\n===== REPORT =====")
 
-    if choice == "1":
-        print("\nStudent Report")
-        print("No student data available.")
+    print("Student Report")
+    print("Total Students:", len(students))
 
-    elif choice == "2":
-        print("\nCourse Report")
-        print("No course data available.")
-
-    elif choice == "3":
-        return
-
-    else:
-        print("Invalid choice!")
+    print("\nCourse Report")
+    print("Total Courses:", len(courses))

@@ -1,6 +1,6 @@
 from authentication.login import login_user
 from admin.admin_menu import admin_menu
-
+from trainer.trainer_menu import trainer_menu
 
 user = login_user()
 
@@ -9,7 +9,7 @@ if user:
         admin_menu()
 
     elif user["role"] == "trainer":
-        print("Trainer menu will be added soon.")
+        trainer_menu()
 
     elif user["role"] == "student":
         print("Student menu will be added soon.")

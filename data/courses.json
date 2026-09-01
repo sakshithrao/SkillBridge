@@ -8,5 +8,10 @@
         "id": 2,
         "name": " Java",
         "duration": "3 months"
+    },
+    {
+        "id": 3,
+        "name": "c",
+        "duration": "3 months"
     }
 ]

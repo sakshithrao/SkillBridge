@@ -1,1 +1,8 @@
-[]
+[
+    {
+        "id": 1,
+        "name": "ramu",
+        "email": "ramu@studentgmail.com",
+        "course": "python"
+    }
+]

@@ -1,27 +1,68 @@
+import json
+
+STUDENTS_FILE = "data/students.json"
+
+
+def load_students():
+    try:
+        with open(STUDENTS_FILE, "r") as file:
+            return json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+
+def save_students(students):
+    with open(STUDENTS_FILE, "w") as file:
+        json.dump(students, file, indent=4)
+
+
 def manage_students():
-    print("\n--- Manage Students ---")
-    print("1. Add Student")
-    print("2. View Students")
-    print("3. Back")
+    while True:
+        print("\n--- Manage Students ---")
+        print("1. Add Student")
+        print("2. View Students")
+        print("3. Back")
 
-    choice = input("Enter your choice: ")
+        choice = input("Enter your choice: ")
 
-    if choice == "1":
-        name = input("Enter student name: ")
-        email = input("Enter student email: ")
-        course = input("Enter course name: ")
+        if choice == "1":
+            name = input("Enter student name: ")
+            email = input("Enter student email: ")
+            course = input("Enter course name: ")
 
-        print("\nStudent added successfully!")
-        print("Name:", name)
-        print("Email:", email)
-        print("Course:", course)
+            students = load_students()
 
-    elif choice == "2":
-        print("\n--- Students ---")
-        print("No students available.")
+            student = {
+                "id": len(students) + 1,
+                "name": name,
+                "email": email,
+                "course": course
+            }
 
-    elif choice == "3":
-        return
+            students.append(student)
+            save_students(students)
 
-    else:
-        print("Invalid choice!")
+            print("\nStudent added successfully!")
+            print("Name:", name)
+            print("Email:", email)
+            print("Course:", course)
+
+        elif choice == "2":
+            students = load_students()
+
+            print("\n--- Students ---")
+
+            if not students:
+                print("No students available.")
+            else:
+                for student in students:
+                    print("\nID:", student["id"])
+                    print("Name:", student["name"])
+                    print("Email:", student["email"])
+                    print("Course:", student["course"])
+
+        elif choice == "3":
+            return
+
+        else:
+            print("Invalid choice!")

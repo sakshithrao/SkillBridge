@@ -12,5 +12,12 @@
         "email": "admin@skillbridge.com",
         "password": "admin123",
         "role": "admin"
+    },
+    {
+        "id": 3,
+        "name": "Rajesh",
+        "email": "rajeshkanna850@gmail.com",
+        "password": "trainer123",
+        "role": "trainer"
     }
 ]

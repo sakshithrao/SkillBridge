@@ -22,9 +22,9 @@ def admin_menu():
 
         elif choice == "3":
             manage_trainers()
-
+            
         elif choice == "4":
-            print("Logging out...")
+            logout_user()
             break
 
         else:

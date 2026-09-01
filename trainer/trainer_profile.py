@@ -1,11 +1,17 @@
+from utils.file_handler import read_data
+
+
 def trainer_profile():
+    trainers = read_data("data/trainers.json")
+
     print("\n===== TRAINER PROFILE =====")
 
-    name = input("Enter trainer name: ")
-    email = input("Enter trainer email: ")
-    subject = input("Enter subject: ")
+    if len(trainers) == 0:
+        print("No trainer profile found.")
+        return
 
-    print("\n--- Trainer Details ---")
-    print("Name:", name)
-    print("Email:", email)
-    print("Subject:", subject)
+    for trainer in trainers:
+        print("ID:", trainer["id"])
+        print("Name:", trainer["name"])
+        print("Email:", trainer["email"])
+        print()

@@ -1,26 +1,13 @@
+from utils.file_handler import read_data
+
+
 def show_analytics():
-    print("\n===== TRAINER ANALYTICS =====")
+    students = read_data("data/students.json")
+    courses = read_data("data/courses.json")
+    attendance = read_data("data/attendance.json")
 
-    print("1. Total Students")
-    print("2. Course Performance")
-    print("3. Student Attendance")
-    print("4. Back")
+    print("\n===== ANALYTICS =====")
 
-    choice = input("Enter your choice: ")
-
-    if choice == "1":
-        print("\nTotal Students: 0")
-
-    elif choice == "2":
-        print("\nCourse Performance")
-        print("Python: No data available")
-
-    elif choice == "3":
-        print("\nStudent Attendance")
-        print("No attendance data available")
-
-    elif choice == "4":
-        return
-
-    else:
-        print("Invalid choice!")
+    print("Total Students:", len(students))
+    print("Total Courses:", len(courses))
+    print("Total Attendance Records:", len(attendance))

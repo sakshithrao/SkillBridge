@@ -1,8 +1,18 @@
+from utils.file_handler import read_data
+
+
 def view_my_courses():
+    courses = read_data("data/courses.json")
+
     print("\n===== MY COURSES =====")
 
-    print("1. Python")
-    print("2. SQL")
-    print("3. Data Analytics")
+    if len(courses) == 0:
+        print("No courses found.")
+        return
 
-    print("\nThese are your assigned courses.")
+    for course in courses:
+        print(
+            "ID:", course["id"],
+            "| Name:", course["name"],
+            "| Duration:", course["duration"]
+        )
